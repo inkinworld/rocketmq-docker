@@ -1,3 +1,5 @@
 FROM harbor.weizhipin.com/arsenal/rocketmq:4.8.0
 
-ENTRYPOINT ["sh","mqnamesrv"]
+COPY conf/namesrv.properties ${ROCKETMQ_HOME}/conf/
+
+ENTRYPOINT sh mqnamesrv -c $ROCKETMQ_HOME/conf/namesrv.properties
