@@ -1,0 +1,5 @@
+FROM harbor.weizhipin.com/arsenal/rocketmq:4.8.0
+
+COPY conf/2m-noslave/ ${ROCKETMQ_HOME}/conf/2m-noslave
+
+ENTRYPOINT sh mqbroker -c $ROCKETMQ_HOME/conf/2m-noslave/broker-a.properties

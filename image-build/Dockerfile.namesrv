@@ -1,0 +1,3 @@
+FROM harbor.weizhipin.com/arsenal/rocketmq:4.8.0
+
+ENTRYPOINT ["sh","mqnamesrv"]
